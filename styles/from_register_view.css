@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+body {
+    background-color: #f8f9fa;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root {
+    --border-input: #ced4da;
+    --box-shadow-container: rgba(0, 0, 0, 0.4); 
+    --background-button: #070E21;
+    --color-text-button: white;
+    --color-label: #6C757D;
+    --color-cuenta-p: #495057;
+    --color-titulo: #070E21;
+    --color-button: white;
+}
+
+.input-error {
+    border-color: red !important;
+}
+
+.input-success {
+    border-color: var(--border-input) !important;
+}
+
+.container__panel {
+    height: auto;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.container__register{
+    box-shadow: 0px 2px 9px var(--box-shadow-container); 
+    padding: 0px;
+    border-radius: 10px;
+    background-color: white;
+    border-width: 1px;
+    margin: 50px 0px;
+}
+
+.from__volver{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0px 25px;
+    align-items: center;
+}
+.from__volver .volver__button a{
+    color: var(--color-text-button);
+    text-decoration: none;
+    padding: 10px;
+    align-items: center;
+    border-radius: 4px;
+    background-color: var(--background-button);
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.logo{
+    width: 100px;
+    height: auto;
+}
+.form__titulo{
+    margin: 10px 0px 20px 25px;
+}
+.form__titulo h2{
+    font-size: 20px;
+    color: var(--color-titulo);
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+form{
+    padding: 0px 30px;
+}
+.form-label{
+    color: var(--color-label);
+    font-size: 18px;
+    font-family: "Lato", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+.form-control::placeholder{
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 0.4px;
+    color: var(--color-label);
+}
+.form-control input[type="date"]::placeholder {
+    color: red; /* Cambia 'red' por el color que prefieras */
+    opacity: 1; /* Asegura que el color sea opaco */
+}
+input[type="email"],
+input[type="password"],
+input[type="text"],
+input[type="date"],
+input[type="number"],
+.form-select {
+    border: 1px solid var(--border-input);
+    padding: 7px 14px;
+    /* box-sizing: border-box; */
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="text"]:focus,
+input[type="date"]:focus,
+input[type="number"]:focus,
+.form-select:focus {
+    border-color: var(--border-input);
+    /* Cambiar el color de borde al enfocar */
+    box-shadow: none;
+    /* Eliminar la sombra al enfocar */
+    outline: none;
+}
+
+.btn {
+    text-align: center;
+    width: 220px;
+    border: none;
+    background-color: var(--background-button);
+    color: var(--color-button);
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.from__buton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.from__footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.from__footer p{
+    padding-right: 10px;
+    color: var(--color-cuenta-p);
+    font-size: 14px;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin: 0;
+    align-items: center;
+}
+.from__footer a{
+    color: var(--background-bottom);
+    font-size: 1rem;
+    font-family: "Lato", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    align-items: center;
+}
+@media (max-width: 768px) {
+
+    .container__register {
+        margin: 0px;
+    }
+    .col-md-8{
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .container__register{
+        margin: 15px 0px;
+    }
+    form{
+        padding: 15px;
+    }
+    .form__titulo{
+        margin: 0px 15px;
+    }
+    .from__volver{
+        padding: 0px;
+    }
+
+    .esp-text {
+        margin-top: 1rem;
+    }
+
+    .btn {
+        width: 100%;
+    }
+}

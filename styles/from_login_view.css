@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+:root{
+    --background-bottom: #070E21;
+    --color-buttom: white;
+    --color-label: #6C757D;
+    --color-olvido-a: rgba(108, 117, 125, 0.75);
+    --color-cuenta-p: #495057;
+}
+.p2{
+    padding: 10px 0px;
+}
+body{
+    background-color: #ebf7ff;
+    /* background-image: url('../assets/fondo.jpg');
+    background-position: center center;
+    background-repeat: no-repeat; */
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden; 
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+.container{
+    background-color: #FFFFFF;
+    display: flex;
+    max-width: 1000px;
+    height: 600px;
+    margin: 0 auto;
+    padding: 15px 40px 15px 20px;
+    border-radius: 24px;
+    border: 1px solid rgba(187, 187, 187, 1);
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.4);
+}
+.from-container{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+.from-login{
+    display: flex;
+    
+    flex-direction: column;
+}
+
+.from-volver{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 2rem;
+}
+.from-volver a{
+    color: var(--color-buttom);
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 4px;
+    background-color: var(--background-bottom);
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.volver-logo img{
+    width: 100px;
+    height: auto;
+}
+
+.from-info{
+    align-items: center;
+}
+
+.from-info h2{
+    font-size: 1.5rem;
+    text-align: center;
+    align-items: center;
+    margin-bottom: 35px;
+    padding-top: 2.25rem;
+}
+.from-row {
+    display: flex;
+    flex-direction: column;
+    gap:  7px; /* Espacio entre filas */
+    margin-bottom: 20px;
+}
+
+.from-row label {
+    font-size: 1rem;
+    font-family: "Lato", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    color: var(--color-label);
+}
+.from-row input::placeholder{
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 0.4px;
+    color: var(--color-label);
+}
+.from-row input[type="email"],
+.from-row input[type="password"] {
+    width: 392px; 
+    height: 37px; 
+    border: 1px solid #ccc;
+    padding: 7px 14px;
+}
+input[type="email"]:focus, 
+input[type="password"]:focus {
+    border-color: #ced4da; /* Cambiar el color de borde al enfocar */
+    box-shadow: none; /* Eliminar la sombra al enfocar */
+    outline: none;
+}
+.from-olvido {
+    text-align: right; /* Alinea el contenido a la derecha */
+}
+.from-olvido a{
+    text-decoration: none;
+    color: var(--color-olvido-a);
+}
+.from-button{
+    margin: 20px 0px;
+}
+.from-button button {
+    width: 382px; /* Ancho del botón */
+    height: 37px; /* Altura del botón */  
+    border-radius: 8px;
+    background-color: var(--background-bottom);
+    border: none;
+    font-size: 1rem;
+    color: var(--color-buttom);
+}
+.from-footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+}
+.from-footer p {
+    padding-right: 10px;
+    color: var(--color-cuenta-p);
+    font-size: 14px;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.from-footer a{
+    color: var(--background-bottom);
+    font-size: 1rem;
+    font-family: "Lato", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.imagen img{
+    width: 440px;
+    height: 100%;
+    border-radius: 14px;
+}
+@media (max-width: 950px) {
+    .imagen {
+        display: none; /* Oculta el contenedor de la imagen */
+    }
+}
+/* Media Query para dispositivos móviles */
+@media only screen and (max-width: 600px) {
+    .container {
+        display: flex;
+        min-width: auto;
+        width: 100%;
+        box-shadow: none;
+    }
+    .from-container{
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+    .imagen{
+        display: none;
+    }
+
+    .from-row input[type="email"],
+    .from-row input[type="password"] {
+        width: 100%;
+        height: 28px; 
+    }
+
+    .from-button button {
+        width: calc(100% - 2px); /* Ajustar el ancho del botón */
+        
+        margin-bottom: 10px;
+    }
+
+    .imagen img {
+        max-width: 200px; /* Reducir el ancho máximo de la imagen en dispositivos móviles */
+    }
+}
