@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modal con Bootstrap</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    :root{
+        --background-color: #070E21;
+        --color-text-button: white;
+    }
+    .modal-dialog {
+      display: flex;
+      align-items: center;
+      min-height: calc(100% - 3.5rem); /* 100% - altura de la barra de navegación */
+    }
+    .modal-content{
+        padding: 0px 10px;
+    }
+    /* Estilo del logo */
+    
+    .modal-header {
+      border-bottom: none; /* Cambia el valor del ancho de la línea según necesites */
+    }
+    .modal-logo {
+      width: 80px; /* Ajusta el tamaño según tu logo */
+    }
+    .btn-close{
+        font-size: 14px;
+    }
+    .modal-body{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+    .modal__titulo{
+        margin-bottom: 10px;
+    }
+    .modal-footer {
+      border-top: none;
+    }
+    .btn__aceptar{
+        background-color: var(--background-color);
+        color: var(--color-text-button);
+    }
+    .btn__cancelar{
+        border: 1px solid var(--background-color);
+        color: var(--background-color);
+    }
+    .btn__aceptar:hover{
+        border: 1px solid var(--background-color);
+        color: var(--background-color);
+    }
+    .btn__cancelar:hover{
+        background-color: var(--background-color);
+        color: var(--color-text-button);
+    }
+  </style>
+</head>
+<body>
+
+<!-- Botón para activar el modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Abrir Modal
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <!-- Encabezado del modal con línea de separación -->
+      <div class="modal-header">
+        <img src="./assets/logo2.png" alt="Logo" class="modal-logo mr-auto">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <!-- Cuerpo del modal -->
+      <div class="modal-body">
+        <div class="modal__titulo">
+            <h5>¡Importante!</h5>
+        </div>
+        <div class="modal__p">
+            <p>Felicidades, su robot ha sido registrado exitosamente para el concurso de robots. ¡Prepárese para mostrar el increíble talento y las capacidades de su creación en la emocionante competencia que se avecina! ¡Buena suerte!</p>
+        </div>    
+    </div>
+      <!-- Pie del modal -->
+      <div class="modal-footer">
+        <!-- Botones -->
+        <button type="button" class="btn btn__cancelar" data-bs-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn__aceptar">Aceptar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Bootstrap JavaScript y dependencias -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+<script>
+  // Función para cerrar el modal solo cuando se haga clic en los botones de cancelar, aceptar o cerrar
+  document.querySelectorAll('.modal-footer button, .modal-header button[data-bs-dismiss="modal"]').forEach(function(button) {
+    button.addEventListener('click', function() {
+      var modal = document.querySelector('.modal');
+      var modalInstance = bootstrap.Modal.getInstance(modal);
+      modalInstance.hide();
+    });
+  });
+</script>
+</body>
+</html>
