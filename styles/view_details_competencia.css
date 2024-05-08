@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+:root{
+    --color-text-title: #334155;
+    --color-fondo-principal: #F9FAFB;
+    --color-card-title: #110D15;
+    --color-card-subtitle: blue;
+}
+
+
+body{
+    overflow: auto;
+    background-color: var(--color-fondo-principal);
+}
+.container__title{
+    font-family: "Lato", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1.5rem;
+    color: var(--color-text-title);
+}
+/* .card {
+    border: none;
+} */
+
+.card-title{
+    font-family: "Lato", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 2.25rem;
+    color: var(--color-card-title);
+}
+.card-text-subtitle{
+    font-family: "Lato", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1rem;
+    color: var(--color-card-subtitle);
+}
+.card-text-descrip{
+    font-family: "Lato", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 0.95rem;
+}
+.card-text-fech{
+    font-family: "Lato", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 0.95rem;
+}
+.card-text-categ{
+    font-family: "Lato", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 0.95rem;
+}
+.list-group{
+    margin-left: 25px;
+}
+.list-group .list-categ{
+    list-style: none;
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-family: "Lato", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 0.95rem;
+}
+.list-group i{
+    font-size: 0.5rem;
+    margin-right: 20px;
+}
+.list-categ .badge{
+    color: black;
+    font-family: "Lato", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 0.95rem;
+}

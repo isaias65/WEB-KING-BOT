@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+:root{
+    --color-text-title: #334155;
+    --color-fondo-principal: #F9FAFB;
+    --color-border: rgb(226, 232, 240);
+    --background-button: #223858;
+    /* --color-text-button: #070E21; */
+    --color-text-button: white;
+    --background-primary-soft: rgba(90, 102, 241, .1);
+    --color-text-button-header: rgb(90, 102, 241);
+}
+body{
+    height: auto;
+    background-color: var(--color-fondo-principal);
+    overflow: auto;
+} 
+/*
+.container{
+    margin-left: 24px;
+} */
+.container__title{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.container__title h1{
+    font-family: "Lato", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1.5rem;
+    color: var(--color-text-title);
+    /* margin-top: 15px; */
+    align-items: center;
+}
+.button__title{
+    display: flex;
+    /* justify-content: end; */
+    /* margin-bottom: 15px; */
+    align-items: center;
+} 
+.button__title a{
+    background-color: var(--background-primary-soft);
+    color: var(--color-text-button-header);
+    text-decoration: none;
+    align-items: center;
+    font-size: 0.95rem;
+    font-family: "Lato", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    border-radius: 0.25rem;
+}
+.col{
+    display: flex;
+    justify-content: center;
+    padding: 10px 5px;
+}
+.card{
+    max-width: 100%;
+    width: 280px;
+    max-height: 100%;
+    border-color: var(--color-border);
+}
+.card-img-top{
+    height: 40%;
+    min-height: 40%;
+    overflow: hidden;
+}
+.card-body .card__span{
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 12px;
+    color: blue;
+}
+.card-body .card-title{
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 16px;
+}
+.card-body .card-text{
+    margin-top: 25px;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    color: #1c1c1cbc;
+    font-style: normal;
+    text-align: center;
+    font-size: 14px;
+    display: -webkit-box; /* Para navegadores webkit */
+    -webkit-line-clamp: 3; /* Limita el texto a 3 líneas */
+    -webkit-box-orient: vertical; /* Coloca el texto en dirección vertical */
+    max-height: 105px;
+    overflow: hidden;
+    text-overflow: ellipsis; /* Muestra puntos suspensivos (...) cuando el texto se corta */
+
+}
+/* Estilo para los botones */
+.card__footer{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+.card__footer .btn{
+    background-color: var(--background-button);
+    color: var(--color-text-button);
+    border: none;
+}
+.btn-bottom {
+    position: absolute;
+    bottom: 20px;
+} 
